@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MiguelGondresPA2.UI.Registro;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,12 @@ namespace MiguelGondresPA2
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void RegistroButton_Click(object sender, RoutedEventArgs e)
+        {
+            RegistroParcial r = new RegistroParcial();
+            r.Show();
         }
     }
 }
