@@ -4,8 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MiguelGondresPA2.UI.Registro"
+        xmlns:m="clr-namespace:MiguelGondresPA2.Validacion"
         mc:Ignorable="d"
-        Title="RegistroParcial" Height="450" Width="800">
+        Title="RegistroParcial" Height="500" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
@@ -50,23 +51,55 @@
             </Button>
         </StackPanel>
 
-        <!--<StackPanel Orientation="Horizontal" Grid.Row="2">
+        <StackPanel Orientation="Horizontal" Grid.Row="2">
             <TextBlock Name="DescripcionLabel" Text="Descripcion" Margin="30,5,5,5" Width="63"/>
             <TextBox Name="DescripcionTexBox" Margin="12,1,0,0" Grid.Column="1" Foreground="Black" Grid.ColumnSpan="2" Width="142">
                 <TextBox.Text>
                     <Binding Path="Descripcion" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
+                            <!--<m:Validacion x:Name="ValidacionDescripcion" ValidatesOnTargetUpdated="True"/>-->
                             <ExceptionValidationRule/>
                         </Binding.ValidationRules>
                     </Binding>
                 </TextBox.Text>
             </TextBox>
-            <Button x:Name="BuscarButton" Content="Buscar" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Width="63" Grid.Column="2" Height="25" FontWeight="Bold">
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="3" Margin="0,10,0,0">
+            <TextBlock Name="ProblemaLabel" Text="Problema" Margin="30,5,5,5" Width="140" Height="28"/>
+            <TextBlock Name="SolucionLabel" Text="Solucion" Margin="40,5,5,5" Width="80" />
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="4" Margin="0,0,10,10">
+            <TextBox Name="ProblemaTexBox" Margin="15,0,0,0" Grid.Column="1" Foreground="Black" Grid.ColumnSpan="2" Width="142" Height="25">
+                <TextBox.Text>
+                    <Binding Path="Problema" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                        <Binding.ValidationRules>
+                            <!--<m:Validacion x:Name="ValidacionDescripcion" ValidatesOnTargetUpdated="True"/>-->
+                            <ExceptionValidationRule/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+            <TextBox Name="SolucionTexBox" Margin="15,0,0,0" Grid.Column="1" Foreground="Black" Grid.ColumnSpan="2" Width="142" Height="25">
+                <TextBox.Text>
+                    <Binding Path="Solucion" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                        <Binding.ValidationRules>
+                            <!--<m:Validacion x:Name="ValidacionDescripcion" ValidatesOnTargetUpdated="True"/>-->
+                            <ExceptionValidationRule/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="4" Margin="329,0,0,250" Grid.RowSpan="2">
+            <Button x:Name="AgregarButton" Content="     Agregar" HorizontalAlignment="Right" Height="22" Width="69" FontWeight="Bold">
                 <Button.Background>
-                    <ImageBrush ImageSource="/Resources/Buscar.png" Stretch="Uniform" AlignmentX="Left"/>
+                    <ImageBrush ImageSource="/Resources/Nuevo.png" Stretch="Uniform" AlignmentX="Left" />
                 </Button.Background>
             </Button>
-        </StackPanel>-->
+        </StackPanel>
 
 
 
