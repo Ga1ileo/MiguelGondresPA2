@@ -8,7 +8,7 @@ using MiguelGondresPA2.DAL;
 namespace MiguelGondresPA2.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20200323032537_inicial")]
+    [Migration("20200323053226_inicial")]
     partial class inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -37,6 +37,22 @@ namespace MiguelGondresPA2.Migrations
                     b.HasIndex("LlamadaId");
 
                     b.ToTable("LlamadaDetalle");
+
+                    b.HasData(
+                        new
+                        {
+                            LlamadaDetalleId = 1,
+                            LlamadaId = 1,
+                            Problema = "Sin Cuerdas",
+                            Solucion = "Comprar Cuerdas"
+                        },
+                        new
+                        {
+                            LlamadaDetalleId = 2,
+                            LlamadaId = 2,
+                            Problema = "Sin Bateria",
+                            Solucion = "Comprar Bateria"
+                        });
                 });
 
             modelBuilder.Entity("MiguelGondresPA2.Entidades.Llamadas", b =>
@@ -50,7 +66,19 @@ namespace MiguelGondresPA2.Migrations
 
                     b.HasKey("LlamadaId");
 
-                    b.ToTable("llamadas");
+                    b.ToTable("Llamadas");
+
+                    b.HasData(
+                        new
+                        {
+                            LlamadaId = 1,
+                            Descripcion = "Guitarra"
+                        },
+                        new
+                        {
+                            LlamadaId = 2,
+                            Descripcion = "Celular"
+                        });
                 });
 
             modelBuilder.Entity("MiguelGondresPA2.Entidades.LlamadaDetalle", b =>

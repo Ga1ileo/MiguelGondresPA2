@@ -61,7 +61,7 @@ namespace MiguelGondresPA2.BLL
             Contexto contexto = new Contexto();
             try
             {
-                contexto.Database.ExecuteSqlRaw($"DELETE FROM LlamadasDetalles Where LlamadaId={llamadas.LlamadaId}");
+                contexto.Database.ExecuteSqlRaw($"DELETE FROM LlamadaDetalle Where LlamadaId={llamadas.LlamadaId}");
                 foreach (var anterior in llamadas.LlamadaDetalle)
                 {
                     contexto.Entry(anterior).State = EntityState.Added;

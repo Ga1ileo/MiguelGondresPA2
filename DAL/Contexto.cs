@@ -14,5 +14,14 @@ namespace MiguelGondresPA2.DAL
             optionsBuilder.UseSqlite(@"Data Source = DAL\DATA\RRparcial2.db");
         }
 
+       protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Llamadas>().HasData(new Llamadas { LlamadaId = 1, Descripcion = "Guitarra" });
+            modelBuilder.Entity<LlamadaDetalle>().HasData(new LlamadaDetalle { LlamadaDetalleId = 1, LlamadaId = 1, Problema = "Sin Cuerdas", Solucion = "Comprar Cuerdas" });
+            modelBuilder.Entity<Llamadas>().HasData(new Llamadas { LlamadaId = 2, Descripcion = "Celular" });
+            modelBuilder.Entity<LlamadaDetalle>().HasData(new LlamadaDetalle { LlamadaDetalleId = 2, LlamadaId = 2, Problema = "Sin Bateria", Solucion = "Comprar Bateria" });
+
+
+        }
     }
 }
