@@ -78,7 +78,7 @@
                 <TextBox.Text>
                     <Binding Path="Problema" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
-                            <!--<m:Validacion x:Name="Validacion" ValidatesOnTargetUpdated="True"/>-->
+                            <!--<m:Validacion x:Name="ProblemaValidacion" ValidatesOnTargetUpdated="True"/>-->
                             <ExceptionValidationRule/>
                         </Binding.ValidationRules>
                     </Binding>
@@ -88,7 +88,7 @@
                 <TextBox.Text>
                     <Binding Path="Solucion" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
-                            <!--<m:Validacion x:Name="completa" ValidatesOnTargetUpdated="True"/>-->
+                            <!--<m:Validacion x:Name="SolucionValidacion" ValidatesOnTargetUpdated="True"/>-->
                             <ExceptionValidationRule/>
                         </Binding.ValidationRules>
                     </Binding>
@@ -96,7 +96,7 @@
             </TextBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="4" Margin="329,0,0,250" Grid.RowSpan="2">
-            <Button x:Name="AgregarButton"  Content="Agregar" HorizontalContentAlignment="Right" Height="22"  Width="69"   FontWeight="Bold" Click="AgregarButton_Click">
+            <Button x:Name="AgregarButton"  Content="Agregar Problema" HorizontalContentAlignment="Right" Height="22"  Width="129"   FontWeight="Bold" Click="AgregarButton_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/Resources/Nuevo.png" AlignmentX="Left" Stretch="Uniform"/>
                 </Button.Background>
@@ -137,8 +137,6 @@
             </Button>
 
         </StackPanel>
-
-
 
     </Grid>
 </Window>
