@@ -6,7 +6,7 @@ using System.Windows.Controls;
 
 namespace MiguelGondresPA2.Validacion
 {
-    public class Validacion : ValidationRule
+    public class Validaciones : ValidationRule
     {
         public override ValidationResult Validate(object value, CultureInfo cultureInfo)
         {

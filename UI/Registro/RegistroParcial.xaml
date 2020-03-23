@@ -59,7 +59,7 @@
                 <TextBox.Text>
                     <Binding Path="Descripcion" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
-                            <!--<m:Validacion x:Name="DescripcionValidacion" ValidatesOnTargetUpdated="True"/>-->
+                            <!--<m:Validaciones x:Name="DescripcionValidacion" ValidatesOnTargetUpdated="True"/>-->
                             <ExceptionValidationRule/>
                         </Binding.ValidationRules>
                     </Binding>
@@ -78,7 +78,7 @@
                 <TextBox.Text>
                     <Binding Path="Problema" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
-                            <!--<m:Validacion x:Name="ProblemaValidacion" ValidatesOnTargetUpdated="True"/>-->
+                            <!--<m:Validaciones x:Name="ValidacionProblema" ValidatesOnTargetUpdated="True"/>-->
                             <ExceptionValidationRule/>
                         </Binding.ValidationRules>
                     </Binding>
@@ -88,7 +88,7 @@
                 <TextBox.Text>
                     <Binding Path="Solucion" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
-                            <!--<m:Validacion x:Name="SolucionValidacion" ValidatesOnTargetUpdated="True"/>-->
+                            <!--<m:Validaciones x:Name="SolucionValidacion" ValidatesOnTargetUpdated="True"/>-->
                             <ExceptionValidationRule/>
                         </Binding.ValidationRules>
                     </Binding>
