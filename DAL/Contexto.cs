@@ -8,7 +8,7 @@ namespace MiguelGondresPA2.DAL
 {
     public class Contexto : DbContext
     {
-        public DbSet<Llamadas> llamadas { get; set; }
+        public DbSet<Llamadas> Llamadas { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite(@"Data Source = DAL\DATA\RRparcial2.db");
