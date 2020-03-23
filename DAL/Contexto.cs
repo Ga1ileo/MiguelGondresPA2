@@ -11,7 +11,7 @@ namespace MiguelGondresPA2.DAL
         public DbSet<Llamadas> llamadas { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite(@"Data Source = DATA\RRparcial2.db");
+            optionsBuilder.UseSqlite(@"Data Source = DAL\DATA\RRparcial2.db");
         }
 
     }
